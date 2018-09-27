@@ -162,6 +162,9 @@ public class CropIwaBitmapManager {
                     return null;
                 }
             }
+            catch (IllegalArgumentException ignore){
+                return null;
+            }
             return ensureCorrectRotation(context, uri, result);
         }
     }
