@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -185,6 +186,10 @@ public class CropIwaView extends FrameLayout {
         CropIwaBitmapManager.get().crop(
                 getContext(), cropArea, mask,
                 imageUri, saveConfig);
+    }
+
+    public RectF getCropRect(){
+        return overlayView.getCropRect();
     }
 
     @Override
