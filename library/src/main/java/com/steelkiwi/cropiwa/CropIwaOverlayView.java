@@ -166,9 +166,13 @@ class CropIwaOverlayView extends View implements ConfigChangeListener, OnImagePo
             halfWidth = halfHeight * aspectRatio.getRatio();
         }
 
-        cropRect.set(
-                centerX - halfWidth, centerY - halfHeight,
+        updateCropRect(centerX - halfWidth, centerY - halfHeight,
                 centerX + halfWidth, centerY + halfHeight);
+
+    }
+
+    public void updateCropRect(float left, float top, float right, float bottom) {
+        cropRect.set(left, top,right, bottom);
     }
 
     private AspectRatio getAspectRatio() {
