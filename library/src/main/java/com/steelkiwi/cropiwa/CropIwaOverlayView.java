@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -172,7 +171,6 @@ class CropIwaOverlayView extends View implements ConfigChangeListener, OnImagePo
                 centerX + halfWidth, centerY + halfHeight);
     }
 
-    @Nullable
     private AspectRatio getAspectRatio() {
         AspectRatio aspectRatio = config.getAspectRatio();
         if (aspectRatio == AspectRatio.IMG_SRC) {
